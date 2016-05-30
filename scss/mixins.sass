@@ -1,0 +1,29 @@
+@mixin radius($radius: 4px)
+  border-radius: $radius
+
+@mixin fr
+  float: right
+
+@mixin fl
+  float: left
+
+@mixin placeholder
+  &::-webkit-input-placeholder
+      @content
+
+  &:-moz-placeholder
+      @content
+
+  &::-moz-placeholder
+      @content
+
+  &:-ms-input-placeholder
+      @content
+
+@mixin vertical-middle($left: 0, $right: 0)
+  position: absolute
+  top: 0
+  bottom: 0
+  left: $left
+  right: $right
+  margin: auto

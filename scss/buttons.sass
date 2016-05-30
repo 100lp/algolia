@@ -1,0 +1,118 @@
+%button
+  +button()
+  +radius(2px)
+  font-size: 0.8rem
+  padding: 0.52rem 0.8rem
+  margin: 0 1rem
+  border: 0
+  user-select: none
+
+.button
+  @extend %button
+
+.green-button
+  @extend %button
+  +button-style(#7AC943)
+  color: white
+  font-size: rem-calc(14)
+
+  &:visited
+    color: white
+
+.blue-button
+  @extend %button
+  +button-style($bright-blue-color)
+
+  &:hover, &:focus
+    background: darken($bright-blue-color, 5%)
+
+  &:active
+    transition-duration: 0.10s
+    box-shadow: inset 0px 2px 3px #134A5B
+
+  &:visited
+    color: white
+
+.shadow-button
+  @extend %button
+  +button-style(white)
+  box-shadow: 0px 0px 10px 0px rgba(174, 174, 174, 0.46)
+
+  &:hover
+    background: white
+    box-shadow: 0px 0px 10px 0px rgba(226, 227, 216, 0.46)
+    color: lighten(black, 10%)
+
+  &:focus
+    background: white
+    color: lighten(black, 10%)
+
+  &:active
+    transition-duration: 0.10s
+    box-shadow: inset 0px 0px 6px rgba(0, 0, 0, 0.15)
+
+  &:visited
+    color: black
+
+.gray-button
+  @extend %button
+  +button-style($dark-gray-color)
+
+  &:hover, &:focus
+    background: darken($dark-gray-color, 2%)
+    color: $medium-blue-color
+
+  &:active
+    transition-duration: 0.10s
+    box-shadow: inset 0px 2px 3px rgba(0, 0, 0, 0.15)
+
+.button-dropdown
+  @extend %button
+  padding: 0
+  background: $asphalt-color
+  text-align: left
+  +foundation-dropdown-menu()
+  +foundation-menu()
+
+  &:hover, &:focus
+    border-radius: 0
+    background: $asphalt-color
+
+  .dropdown.menu
+    li
+      a
+        color: #ced7db
+        padding: 0.52rem 0.8rem
+
+        .icon-arrow
+          stroke: #ced7db
+
+    ul.submenu
+      border: 0
+      min-width: 100%
+      width: auto
+
+.blue-icon-button
+  @extend %button
+  +button-style($medium-blue-color)
+  padding: 0.6rem 0.6rem 0.6rem 2rem
+  position: relative
+  font-size: 0.95rem
+
+  &:hover, &:focus
+    background: darken($medium-blue-color, 5%)
+
+  &:active
+    transition-duration: 0.10s
+    box-shadow: inset 0px 2px 3px #134A5B
+
+  &:visited
+    color: white
+
+  .icon-play
+    fill: white
+    height: 10.5px
+    width: 10.5px
+    position: absolute
+    left: 0.8rem
+    top: 0.7rem

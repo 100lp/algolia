@@ -1,0 +1,80 @@
+@charset 'utf-8';
+
+@import 'settings';
+@import 'foundation';
+@import 'mixins';
+@import 'layout';
+@import 'fonts';
+@import 'common';
+@import 'icons';
+@import 'buttons';
+
+@import '../svg/sprite/view/sprite';
+
+@include foundation-global-styles;
+@include foundation-grid;
+
+.algolia-autocomplete {
+  width: 100%;
+}
+.algolia-autocomplete .aa-input, .algolia-autocomplete .aa-hint {
+  width: 100%;
+  min-height: 30px;
+  text-indent: 10px;
+}
+.algolia-autocomplete .aa-hint {
+  color: #999;
+}
+.algolia-autocomplete .aa-dropdown-menu {
+  width: 100%;
+  background-color: #fff;
+  border: 1px solid #999;
+  border-top: none;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion {
+  cursor: pointer;
+  padding: 5px 4px;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion.aa-cursor {
+  background-color: #B2D7FF;
+}
+.algolia-autocomplete .aa-dropdown-menu .aa-suggestion em {
+  font-weight: bold;
+  font-style: normal;
+}
+
+
+// @import 'components/tabs/tabs';
+
+// @import 'motion-ui';
+
+// @include foundation-typography;
+// @include foundation-button;
+// @include foundation-forms;
+// @include foundation-visibility-classes;
+// @include foundation-float-classes;
+// @include foundation-accordion;
+// @include foundation-badge;
+// @include foundation-breadcrumbs;
+// @include foundation-button-group;
+// @include foundation-callout;
+// @include foundation-close-button;
+// @include foundation-drilldown-menu;
+// @include foundation-flex-video;
+// @include foundation-label;
+// @include foundation-media-object;
+// @include foundation-off-canvas;
+// @include foundation-orbit;
+// @include foundation-pagination;
+// @include foundation-progress-bar;
+// @include foundation-slider;
+// @include foundation-sticky;
+// @include foundation-reveal;
+// @include foundation-switch;
+// @include foundation-table;
+// @include foundation-tabs;
+// @include foundation-thumbnail;
+// @include foundation-tooltip;
+
+// @include motion-ui-transitions;
+// @include motion-ui-animations;

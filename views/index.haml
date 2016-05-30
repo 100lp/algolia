@@ -1,0 +1,33 @@
+!!!
+%html.no-js{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %meta{:content => "ie=edge", "http-equiv" => "x-ua-compatible"}
+    %meta{:content => "width=device-width, initial-scale=1.0", :name => "viewport"}
+    %title ororo zf
+    %link{:href => "css/app.css", :rel => "stylesheet"}
+
+    %script{:src => "//cdn.jsdelivr.net/algoliasearch/3/algoliasearch.min.js"}
+    %script{:src => "//cdn.jsdelivr.net/autocomplete.js/0/autocomplete.min.js"}
+  %body
+    .wrapper
+      / = render('./views/header-menu.haml')
+      / = render('./views/advice-banner.haml')
+      / = render('./views/content.haml')
+      %input#search-input{:type => "text"}
+      %footer.site-footer
+        .row
+          %div Algolia footer
+
+
+    / %script{:src => "https://cdn.jsdelivr.net/jquery/2.1.3/jquery.min.js"}
+    / %script{:src => "https://cdn.jsdelivr.net/algoliasearch/3/algoliasearch.jquery.min.js"}
+
+    / build:js js/combined.js
+    / %script{:src => "https://cdn.jsdelivr.net/algoliasearch/3.14.6/algoliasearch.jquery.min.js"}
+    %script{:src => "bower_components/jquery/dist/jquery.js"}
+    %script{:src => "bower_components/what-input/what-input.js"}
+    %script{:src => "bower_components/foundation-sites/dist/foundation.js"}
+    %script{:src => "js/app.js"}
+    / endbuild
+

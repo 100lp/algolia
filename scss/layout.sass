@@ -1,0 +1,64 @@
+.wrapper
+  display: table
+  height: 100%
+  width: 100%
+
+.content
+  display: table-row
+  height: 100%
+
+.container
+  +grid-row()
+  position: relative
+  min-width: 320px
+  padding: 0 14px
+
+.panel
+  background-color: white
+  box-shadow: 0px 0 20px rgba(183, 189, 189, 0.64)
+
+  +breakpoint(medium)
+
+  +breakpoint(large)
+
+  +breakpoint(xlarge)
+    +radius()
+
+
+.layout-sidebar.columns
+
+  +breakpoint(medium)
+
+  +breakpoint(large down)
+    padding: 0
+    box-shadow: 6px 0 12px 0px rgba(183, 189, 189, 0.36)
+    position: relative
+
+    .panel
+      box-shadow: none
+
+  +breakpoint(xlarge)
+    margin-top: $boundary
+    +radius(0)
+
+.layout-main.columns
+  min-width: 320px
+
+  .header
+    padding: 0 20px
+
+  +breakpoint(medium)
+
+  +breakpoint(large down)
+    padding: 0
+
+    .panel
+      box-shadow: none
+
+  +breakpoint(xlarge)
+    margin-top: $boundary
+
+.site-footer
+  background-color: $primary-color
+  margin-top: 200px
+  color: $white
